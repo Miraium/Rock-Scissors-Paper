@@ -56,10 +56,10 @@ namespace Rock_Scissors_Paper
             System.Random r = new System.Random();
             this.hand = r.Next(3);  // 0~2の整数がhandに入る
 
-            // 悲しいことに乱数はPC内の時間をシード値として生成され、
+            // 乱数はPC内の時間をシード値として生成され、
             // 経過時間があまり経っていない(15ミリ秒)と同じシード値を持ってしまう可能性があるらしいので、
             // 苦し紛れのSleepを入れることにする。
-            // 単純な解決策だけど処理時間がかかって最悪。悲しい。
+            // 単純な解決策だけど処理時間がかかるので良くない。
             // Ref. https://msdn.microsoft.com/ja-jp/library/system.random(v=vs.110).aspx#Multiple
             System.Threading.Thread.Sleep(15);
         }
