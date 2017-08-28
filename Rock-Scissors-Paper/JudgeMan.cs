@@ -63,11 +63,11 @@ namespace Rock_Scissors_Paper
 
             bool flgType3 = (flgR && flgP && flgS);
             bool flgOnly1 = (flgR && !flgP && !flgS) || (!flgR && flgP && !flgS) || (!flgR && !flgP && flgS);
-            //bool flgOnly1 = 
-            // (flgR == true && flgP == false && flgS == false) || 
-            // (flgR == false && flgP == true && flgS == false) || 
+            //bool flgOnly1 =
+            // (flgR == true && flgP == false && flgS == false) ||
+            // (flgR == false && flgP == true && flgS == false) ||
             // (flgR == false && flgP == false && flgS == true);
-            //bool flgType3 = 
+            //bool flgType3 =
             // (flgR == true && flgP == true && flgS == true);
 
             // 結果をコンソールに表示

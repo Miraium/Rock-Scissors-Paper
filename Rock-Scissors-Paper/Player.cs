@@ -40,11 +40,13 @@ namespace Rock_Scissors_Paper
     {
         private string name;    // プレイヤーの名前
         private int hand;   // 現在の手の状態
+        //static private System.Random r; // 乱数用のクラス変数
 
         // コンストラクタ
         public Player(string playerName){
             // 生成時にプレイヤーの名前を決めてしまう
             this.name = playerName;
+            //r = new System.Random();
         }
 
         // 出す手を決める関数
@@ -53,7 +55,7 @@ namespace Rock_Scissors_Paper
             // 出す手をランダムに決める
             // 乱数の生成方法
             // Ref. https://dobon.net/vb/dotnet/programing/random.html
-            System.Random r = new System.Random();
+            System.Random r = new System.Random();    // クラス変数にすることで不要になった
             this.hand = r.Next(3);  // 0~2の整数がhandに入る
 
             // 乱数はPC内の時間をシード値として生成され、
@@ -61,7 +63,7 @@ namespace Rock_Scissors_Paper
             // 苦し紛れのSleepを入れることにする。
             // 単純な解決策だけど処理時間がかかるので良くない。
             // Ref. https://msdn.microsoft.com/ja-jp/library/system.random(v=vs.110).aspx#Multiple
-            System.Threading.Thread.Sleep(15);
+            System.Threading.Thread.Sleep(15);    // 乱数生成はクラス変数が行うことになったので不要になった
         }
 
         // 出す手を決めて、外に公開する関数
